@@ -4,9 +4,9 @@
 
 # Site
 title: 小傅哥的码场
-subtitle: '沉淀、分享、成长'
-description: '小傅哥。一线互联网java 工程师、架构师，开发过交易&营销、写过运营&活动、设计过中间件也倒腾过中继器、IO板卡。不只是写Java语言，也搞过C#、PHP，是一个技术活跃的折腾者。'
-keywords:
+subtitle: 沉淀、分享、成长
+description: 小傅哥。一线互联网java 工程师、架构师，开发过交易&营销、写过运营&活动、设计过中间件也倒腾过中继器、IO板卡。不只是写Java语言，也搞过C#、PHP，是一个技术活跃的折腾者。
+keywords: Java、netty、dubbo、asm、Javassist、重学Java设计模式、面经手册、字节码编程、码农职场故事、源码分析、全链路监控、领域驱动设计、源码分析
 author: 小傅哥
 language: en
 timezone: ''
