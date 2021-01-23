@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>《重学Java设计模式》PDF 下载 | 小傅哥的码场</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="作者：小傅哥博客：https:&#x2F;&#x2F;bugstack.cn  沉淀、分享、成长，让自己和他人都能有所收获！😄  一、前言我膨胀了💥，在编写完上一本PDF《字节码编程》被下载了2000份以后，蠢蠢欲动开始计划第二本。于是从🌹5月20日那天投身实战型设计模式打磨，通过模拟互联网业务开发实际需求作为学习场景，讲解设计模式。 全书共计22个真实业务场景对应59组案例工程、编写了18万字271页的PDF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《重学Java设计模式》PDF 下载">
+<meta property="og:url" content="http://example.com/2021/01/23/%E9%87%8D%E5%AD%A6%20Java%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:site_name" content="小傅哥的码场">
+<meta property="og:description" content="作者：小傅哥博客：https:&#x2F;&#x2F;bugstack.cn  沉淀、分享、成长，让自己和他人都能有所收获！😄  一、前言我膨胀了💥，在编写完上一本PDF《字节码编程》被下载了2000份以后，蠢蠢欲动开始计划第二本。于是从🌹5月20日那天投身实战型设计模式打磨，通过模拟互联网业务开发实际需求作为学习场景，讲解设计模式。 全书共计22个真实业务场景对应59组案例工程、编写了18万字271页的PDF">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://bugstack.cn/assets/images/illustration/swell.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/pdflogo.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/11.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/12.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/13.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/14.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/15.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/21.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/22.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/23.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/24.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/25.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/26.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/27.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/31.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/32.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/33.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/34.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/35.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/36.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/37.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/38.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/39.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/310.png">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/design/mkt.png">
+<meta property="article:published_time" content="2021-01-23T06:12:00.000Z">
+<meta property="article:modified_time" content="2021-01-23T08:39:01.652Z">
+<meta property="article:author" content="小傅哥">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="设计模式">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bugstack.cn/assets/images/illustration/swell.png">
+  
+    <link rel="alternative" href="/atom.xml" title="小傅哥的码场" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/assets/img/xiaofuge.jpeg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/"></a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/%E4%BB%A3%E7%A0%81%E8%AF%84%E5%AE%A1/" style="font-size: 10px;">代码评审</a> <a href="/tags/%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">屎山代码</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%AE%97%E6%B3%95%E9%80%BB%E8%BE%91/" style="font-size: 10px;">算法逻辑</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E4%BC%98%E5%8C%96/" style="font-size: 10px;">设计优化</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">小傅哥。一线互联网java 工程师、架构师，开发过交易&amp;营销、写过运营&amp;活动、设计过中间件也倒腾过中继器、IO板卡。不只是写Java语言，也搞过C#、PHP，是一个技术活跃的折腾者。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/assets/img/xiaofuge.jpeg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-重学 Java 设计模式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2021/01/23/%E9%87%8D%E5%AD%A6%20Java%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="article-date">
+  	<time datetime="2021-01-23T06:12:00.000Z" itemprop="datePublished">2021-01-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《重学Java设计模式》PDF 下载
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作者：小傅哥<br><br/>博客：<a target="_blank" rel="noopener" href="https://bugstack.cn/">https://bugstack.cn</a></p>
+<blockquote>
+<p>沉淀、分享、成长，让自己和他人都能有所收获！😄</p>
+</blockquote>
+<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p><strong>我膨胀了💥</strong>，在编写完上一本PDF《字节码编程》被下载了2000份以后，蠢蠢欲动开始计划第二本。于是从🌹5月20日那天投身实战型设计模式打磨，通过模拟互联网业务开发实际需求作为学习场景，讲解设计模式。</p>
+<p><strong>全书共计22个真实业务场景对应59组案例工程、编写了18万字271页的PDF、从5月20日开始耗时50天打造完成。</strong></p>
+<p><img src="https://bugstack.cn/assets/images/illustration/swell.png"></p>
+<p>💋<code>鉴于作者水平有限</code>，如果书中含有不易理解的内容，一定是作者在编写的过程中缺少必要的描述和严格的校准，感谢把你的意见或者疑问提交给我，也欢迎与我多一些交互，互相进步共同成长。</p>
+<a id="more"></a>
+
+<h2 id="二、简介"><a href="#二、简介" class="headerlink" title="二、简介"></a>二、简介</h2><p><img src="https://bugstack.cn/assets/images/2020/design/pdflogo.png"></p>
+<p>欢迎来到这里，很高兴你<code>将</code>拿到这本电子书，如果你能坚持看完并按照书中的例子进行实践，那么在编程开发的世界里，就又多了一个可以写出良好代码的人，同时也为架构师培养储备了一个人才。</p>
+<p>可能在此之前你也多少了解过设计模式，但在实际的业务开发中使用却不多，多数时候都是大面积堆积<code>ifelse</code>组装业务流程，对于一次次的需求迭代和逻辑补充，只能东拼西凑<code>Ctrl+C</code>、<code>Ctrl+V</code>。</p>
+<p>所以为了能让更多的程序员👨‍💻‍更好的接受设计思想和架构思维，并能运用到实际的业务场景。本书的作者<code>小傅哥</code>，投入50天时间，从互联网实际业务开发中抽离出，交易、营销、秒杀、中间件、源码等22个真实场景，来学习设计模式实践使用的应用可上手技能。</p>
+<h3 id="1-谁发明了设计模式？"><a href="#1-谁发明了设计模式？" class="headerlink" title="1. 谁发明了设计模式？"></a>1. 谁发明了设计模式？</h3><p>设计模式的概念最早是由 <code>克里斯托佛·亚历山大</code> 在其著作 <code>《建筑模式语言》</code> 中首次提出的。 本书介绍了城市设计的 “语言”，提供了253个描述城镇、邻里、住宅、花园、房间及西部构造的模式， 而此类 “语言” 的基本单元就是模式。后来，<code>埃里希·伽玛</code>、 <code>约翰·弗利赛德斯</code>、 <code>拉尔夫·约翰逊</code> 和 <code>理查德·赫尔姆</code> 这四位作者接受了模式的概念。 1994 年， 他们出版了 <code>《设计模式： 可复用面向对象软件的基础》</code> 一书， 将设计模式的概念应用到程序开发领域中。 </p>
+<p>其实有一部分人并没有仔细阅读过设计模式的相关书籍和资料，但依旧可以编写出优秀的代码。这主要是由于在经过众多项目的锤炼和对程序设计的不断追求，从而在多年编程历程上提炼出来的心得体会。而这份经验最终会与设计模式提到的内容几乎一致，同样会要求高内聚、低耦合、可扩展、可复用。你可能也遇到类似的经历，在学习一些框架的源码时，发现它里的某些设计和你在做开发时一样。</p>
+<h3 id="2-我怎么学不会设计模式？"><a href="#2-我怎么学不会设计模式？" class="headerlink" title="2. 我怎么学不会设计模式？"></a>2. 我怎么学不会设计模式？</h3><p>钱也花了，书也买了。代码还是一坨一坨的！设计模式是由多年的经验提炼出来开发指导思想。就像我告诉你自行车怎么骑、汽车怎么开，但只要你没跑过几千公里，你能记住的只是理论，想上道依旧很慌！</p>
+<p><strong>所以</strong>，本设计模式专题系列开始，会带着你使用设计模式的思想去优化代码。从而学习设计模式的心得并融入给自己。当然这里还需要多加练习，一定是<em>人车合一</em>，才能站在设计模式的基础上构建出更加合理的代码。</p>
+<h3 id="3-适合人群"><a href="#3-适合人群" class="headerlink" title="3. 适合人群"></a>3. 适合人群</h3><ol>
+<li>具备一定编程基础在工作1-3年的研发人员</li>
+<li>希望通过此书提升编码思维，剔除到代码中的坏味道</li>
+<li>有意愿成为架构师，但还处在一定瓶颈期</li>
+<li>学习过设计模式，可是一直想找到一本可以落地真实场景参照的书籍</li>
+</ol>
+<h3 id="4-我能学到什么"><a href="#4-我能学到什么" class="headerlink" title="4. 我能学到什么"></a>4. 我能学到什么</h3><ol>
+<li>优化平时开发中的ifelse语句，让代码更加整洁</li>
+<li>看设计模式不再是用理论生搬硬套，这次可以有点用</li>
+<li>站在更高的角度去看待编程开发，学会更多的面向对象的思维，尤其是；接口、抽象类、多态等使用</li>
+<li>升职、加薪，良好的代码是效能提升的基础，成为本组编码最靓的精神小伙</li>
+</ol>
+<h3 id="5-阅读建议"><a href="#5-阅读建议" class="headerlink" title="5. 阅读建议"></a>5. 阅读建议</h3><p>本书属于实战型而不是理论介绍类书籍，每一章节都有对应的完整代码，学习的过程需要参考书中的章节与代码一起学习，同时在学习的过程中需要了解并运行代码。学习完成后进行知识点的总结，以及思考🤔这样的设计模式在自己的业务场景中需要如何使用。</p>
+<h2 id="三、书中目录"><a href="#三、书中目录" class="headerlink" title="三、书中目录"></a>三、书中目录</h2><p>设计模式遵循六大原则；单一职责(<code>一个类和方法只做一件事</code>)、里氏替换(<code>多态，子类可扩展父类</code>)、依赖倒置(<code>细节依赖抽象，下层依赖上层</code>)、接口隔离(<code>建立单一接口</code>)、迪米特原则(<code>最少知道，降低耦合</code>)、开闭原则(<code>抽象架构，扩展实现</code>)，会在具体的设计模式章节中，进行体现。</p>
+<h3 id="1-创建型模式"><a href="#1-创建型模式" class="headerlink" title="1. 创建型模式"></a>1. 创建型模式</h3><p><strong>这类模式提供创建对象的机制， 能够提升已有代码的灵活性和可复用性。</strong></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>类型</th>
+<th>图稿</th>
+<th>业务场景</th>
+<th>实现要点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>工厂方法</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/11.png"></td>
+<td>多种类型商品不同接口，统一发奖服务搭建场景</td>
+<td>定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>抽象工厂</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/12.png"></td>
+<td>替换Redis双集群升级，代理类抽象场景</td>
+<td>提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>生成器</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/13.png"></td>
+<td>各项装修物料组合套餐选配场景</td>
+<td>将一个复杂的构建与其表示相分离，使得同样的构建过程可以创建不同的表示。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>原型</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/14.png"></td>
+<td>上机考试多套试，每人题目和答案乱序排列场景</td>
+<td>用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>单例</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/15.png"></td>
+<td>7种单例模式案例，Effective Java 作者推荐枚举单例模式</td>
+<td>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</td>
+</tr>
+</tbody></table>
+<h3 id="2-结构型模式"><a href="#2-结构型模式" class="headerlink" title="2. 结构型模式"></a>2. 结构型模式</h3><p><strong>这类模式介绍如何将对象和类组装成较大的结构， 并同时保持结构的灵活和高效。</strong></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>类型</th>
+<th>图稿</th>
+<th>业务场景</th>
+<th>实现要点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>适配器</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/21.png"></td>
+<td>从多个MQ消息体中，抽取指定字段值场景</td>
+<td>将一个类的接口转换成客户希望的另外一个接口。适配器模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>桥接</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/22.png"></td>
+<td>多支付渠道(微信、支付宝)与多支付模式(刷脸、指纹)场景</td>
+<td>将抽象部分与实现部分分离，使它们都可以独立的变化。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>组合</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/23.png"></td>
+<td>营销差异化人群发券，决策树引擎搭建场景</td>
+<td>将对象组合成树形结构以表示”部分-整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>装饰</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/24.png"></td>
+<td>SSO单点登录功能扩展，增加拦截用户访问方法范围场景</td>
+<td>动态地给一个对象添加一些额外的职责。就增加功能来说，装饰器模式相比生成子类更为灵活。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>外观</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/25.png"></td>
+<td>基于SpringBoot开发门面模式中间件，统一控制接口白名单场景</td>
+<td>为子系统中的一组接口提供一个一致的界面，外观模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>享元</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/26.png"></td>
+<td>基于Redis秒杀，提供活动与库存信息查询场景</td>
+<td>运用共享技术有效地支持大量细粒度的对象。</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>代理</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/27.png"></td>
+<td>模拟mybatis-spring中定义DAO接口，使用代理类方式操作数据库原理实现场景</td>
+<td>为其他对象提供一种代理以控制对这个对象的访问。</td>
+</tr>
+</tbody></table>
+<h3 id="3-行为模式"><a href="#3-行为模式" class="headerlink" title="3. 行为模式"></a>3. 行为模式</h3><p><strong>这类模式负责对象间的高效沟通和职责委派。</strong></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>类型</th>
+<th>图稿</th>
+<th>业务场景</th>
+<th>实现要点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>责任链</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/31.png"></td>
+<td>模拟618电商大促期间，项目上线流程多级负责人审批场景</td>
+<td>避免请求发送者与接收者耦合在一起，让多个对象都有可能接收请求，将这些对象连接成一条链，并且沿着这条链传递请求，直到有对象处理它为止。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>命令</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/32.png"></td>
+<td>模拟高档餐厅八大菜系，小二点单厨师烹饪场景</td>
+<td>将一个请求封装成一个对象，从而使您可以用不同的请求对客户进行参数化。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>迭代器</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/33.png"></td>
+<td>模拟公司组织架构树结构关系，深度迭代遍历人员信息输出场景</td>
+<td>提供一种方法顺序访问一个聚合对象中各个元素, 而又无须暴露该对象的内部表示。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>中介者</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/34.png"></td>
+<td>按照Mybatis原理手写ORM框架，给JDBC方式操作数据库增加中介者场景</td>
+<td>用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>备忘录</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/35.png"></td>
+<td>模拟互联网系统上线过程中，配置文件回滚场景</td>
+<td>在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>观察者</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/36.png"></td>
+<td>模拟类似小客车指标摇号过程，监听消息通知用户中签场景</td>
+<td>定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>状态</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/37.png"></td>
+<td>模拟系统营销活动，状态流程审核发布上线场景</td>
+<td>允许对象在内部状态发生改变时改变它的行为，对象看起来好像修改了它的类。</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>策略</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/38.png"></td>
+<td>模拟多种营销类型优惠券，折扣金额计算策略场景</td>
+<td>定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>模板方法</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/39.png"></td>
+<td>模拟爬虫各类电商商品，生成营销推广海报场景</td>
+<td>定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>访问者</strong></td>
+<td><img src="https://bugstack.cn/assets/images/2020/design/310.png"></td>
+<td>模拟家长与校长，对学生和老师的不同视角信息的访问场景</td>
+<td>主要将数据结构与数据操作分离。</td>
+</tr>
+</tbody></table>
+<p><em>以上图稿和部分描述参考；<a target="_blank" rel="noopener" href="https://refactoringguru.cn、https//www.runoob.com/design-pattern/visitor-pattern.html">https://refactoringguru.cn、https://www.runoob.com/design-pattern/visitor-pattern.html</a></em></p>
+<h2 id="四、PDF📚下载"><a href="#四、PDF📚下载" class="headerlink" title="四、PDF📚下载"></a>四、PDF📚下载</h2><p>下载前，一点对原创作者的支持请求😬，<code>点赞</code>、<code>在看</code>、<code>分享</code>、<code>留言</code>、<code>赞赏</code>，完成任何一样都可以获得🉐这本PDF书籍。</p>
+<h3 id="1-可获得内容包括"><a href="#1-可获得内容包括" class="headerlink" title="1. 可获得内容包括"></a>1. 可获得内容包括</h3><ol>
+<li><code>《重学 Java 设计模式》</code>PDF 书籍一本</li>
+<li>59个对应的工程案例源码一套</li>
+<li>在线阅读版学习了资料</li>
+</ol>
+<h3 id="2-获取方式"><a href="#2-获取方式" class="headerlink" title="2. 获取方式"></a>2. 获取方式</h3><ol>
+<li>扫描下方二维码加专栏学习群，凡进群者都送书籍一本</li>
+<li>添加小傅哥微信(fustack)获取PDF书籍</li>
+<li>公众号内回复PDF下载，你会获得一个连接，打开后右侧<strong>菜单</strong> -&gt; <code>精选</code> -&gt; <code>值得一看的好书</code>，里面对应也有这本书籍📚</li>
+</ol>
+<p><img src="https://bugstack.cn/assets/images/2020/design/mkt.png"></p>
+<h2 id="五、收个尾🎉"><a href="#五、收个尾🎉" class="headerlink" title="五、收个尾🎉"></a>五、收个尾🎉</h2><p>👣走过的路会留下足迹，👨‍💻‍码过的文会盛满四季。</p>
+<p>有时候真的很感谢自己还能坚持做原创技术输出，即使再忙再累也给自己一个当下的交代，在写文章的过程中甚至几乎没有过周末，也没有过半夜。但当自己完成每一篇文章后，那份给自己的努力也传播给其他人技术知识。<strong>也希望读者们能给多多点点在看分享和留言，这几乎是支撑我写作的最大动力回馈</strong></p>
+<p>本书是设计模式实战型书籍📚，编写的过程中常常为找到一个合适并易于理解的场景而抓头发，甚至睡觉中梦到的合适的内容，也要用语音发给自己记录下来。好在50天的坚持终于把这22个设计模式场景写完。如果书中有一些不易于理解的内容，不要担心一定是作者没有描述清楚或找到的案例不适合。可以添加作者小傅哥(fustack)微信，交流相应的技术内容，共同进步。</p>
+<p><strong>最后，我想说</strong>：能力，是你前行的最大保障。哪怕你是兢兢业业的工作者，也是拥有<code>能留下的本事</code>和<code>跳出去的能力</code>，才会相对安稳度过动荡。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/01/17/%E6%95%B0%E5%AD%A6%EF%BC%8C%E7%A6%BB%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E6%9C%89%E5%A4%9A%E8%BF%91%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数学，离一个程序员有多近？</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="重学 Java 设计模式" data-title="《重学Java设计模式》PDF 下载" data-url="http://example.com/2021/01/23/%E9%87%8D%E5%AD%A6%20Java%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2021 小傅哥
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
