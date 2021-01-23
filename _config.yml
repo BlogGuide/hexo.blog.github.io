@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: 小傅哥的码场
+subtitle: '沉淀、分享、成长'
+description: '小傅哥。一线互联网java 工程师、架构师，开发过交易&营销、写过运营&活动、设计过中间件也倒腾过中继器、IO板卡。不只是写Java语言，也搞过C#、PHP，是一个技术活跃的折腾者。'
 keywords:
-author: John Doe
+author: 小傅哥
 language: en
 timezone: ''
 
