@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>握草，你竟然在代码里下毒！ | 小傅哥的码场</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="作者：小傅哥博客：https:&#x2F;&#x2F;bugstack.cn  沉淀、分享、成长，让自己和他人都能有所收获！😄  一、前言学过的代码记不住？方式不对才记不住，你这么记！  Git：上厕所不叫上厕所，叫拉分支！ Socket：厕所就是服务器，坑就是端口！ 队列：上厕所🚽叫入队列，先进先出！ 栈：去厨房🥣叫进栈，后进先出！ 架构：三居的格局叫MVC，四居的格局叫DDD！ 理论：系统结构设计定的好，有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="握草，你竟然在代码里下毒！">
+<meta property="og:url" content="http://example.com/2020/09/06/%E6%8F%A1%E8%8D%89%EF%BC%8C%E4%BD%A0%E7%AB%9F%E7%84%B6%E5%9C%A8%E4%BB%A3%E7%A0%81%E9%87%8C%E4%B8%8B%E6%AF%92%EF%BC%81/index.html">
+<meta property="og:site_name" content="小傅哥的码场">
+<meta property="og:description" content="作者：小傅哥博客：https:&#x2F;&#x2F;bugstack.cn  沉淀、分享、成长，让自己和他人都能有所收获！😄  一、前言学过的代码记不住？方式不对才记不住，你这么记！  Git：上厕所不叫上厕所，叫拉分支！ Socket：厕所就是服务器，坑就是端口！ 队列：上厕所🚽叫入队列，先进先出！ 栈：去厨房🥣叫进栈，后进先出！ 架构：三居的格局叫MVC，四居的格局叫DDD！ 理论：系统结构设计定的好，有">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://bugstack.cn/assets/images/2020/interview/interview-all-00.png">
+<meta property="article:published_time" content="2020-09-06T14:24:00.000Z">
+<meta property="article:modified_time" content="2021-01-23T08:33:13.232Z">
+<meta property="article:author" content="小傅哥">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="屎山代码">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bugstack.cn/assets/images/2020/interview/interview-all-00.png">
+  
+    <link rel="alternative" href="/atom.xml" title="小傅哥的码场" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/assets/img/xiaofuge.jpeg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/"></a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">屎山代码</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%AE%97%E6%B3%95%E9%80%BB%E8%BE%91/" style="font-size: 10px;">算法逻辑</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">小傅哥。一线互联网java 工程师、架构师，开发过交易&amp;营销、写过运营&amp;活动、设计过中间件也倒腾过中继器、IO板卡。不只是写Java语言，也搞过C#、PHP，是一个技术活跃的折腾者。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/assets/img/xiaofuge.jpeg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-握草，你竟然在代码里下毒！" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/09/06/%E6%8F%A1%E8%8D%89%EF%BC%8C%E4%BD%A0%E7%AB%9F%E7%84%B6%E5%9C%A8%E4%BB%A3%E7%A0%81%E9%87%8C%E4%B8%8B%E6%AF%92%EF%BC%81/" class="article-date">
+  	<time datetime="2020-09-06T14:24:00.000Z" itemprop="datePublished">2020-09-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      握草，你竟然在代码里下毒！
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81/" rel="tag">屎山代码</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作者：小傅哥<br><br/>博客：<a target="_blank" rel="noopener" href="https://bugstack.cn/">https://bugstack.cn</a></p>
+<blockquote>
+<p>沉淀、分享、成长，让自己和他人都能有所收获！😄</p>
+</blockquote>
+<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p><code>学过的代码记不住？方式不对才记不住，你这么记！</code></p>
+<ul>
+<li><strong>Git</strong>：上厕所不叫上厕所，叫拉分支！</li>
+<li><strong>Socket</strong>：厕所就是服务器，坑就是端口！</li>
+<li><strong>队列</strong>：上厕所🚽叫入队列，先进先出！</li>
+<li><strong>栈</strong>：去厨房🥣叫进栈，后进先出！</li>
+<li><strong>架构</strong>：三居的格局叫MVC，四居的格局叫DDD！</li>
+<li><strong>理论</strong>：系统结构设计定的好，有点bug没问题，能改。这就是茅坑跟坐便的区别。</li>
+</ul>
+<p><em>除了有点味道以外，这回是不记住了</em>，我们编程写代码的过程和我们日常生活的例子，往往都是这样可以对应上，有了真实可以触及的实物，再去了解编程就会更加容易，也很难忘记。<em>但可能会写着写着代码，就傻笑起来！</em></p>
+<p>除了这些正能量学习的例子，我们接下来再看看哪些有毒的代码！</p>
+<a id="more"></a>
+
+<h2 id="二、代码有毒！"><a href="#二、代码有毒！" class="headerlink" title="二、代码有毒！"></a>二、代码有毒！</h2><p><code>以下代码用好了升职加薪，用不好开除走人！</code></p>
+<h3 id="1-方法命名"><a href="#1-方法命名" class="headerlink" title="1. 方法命名"></a>1. 方法命名</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List&lt;UserInfo&gt; <span class="title">queryBitchUserInfo</span><span class="params">(String req)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>指数：⭐⭐⭐</li>
+<li>解毒：小哥应该是想写批量查询用户的方法名，结果把<code>batch</code>(<em>批量</em>)，写成了<code>bitch</code>(<em>婊子</em>)</li>
+<li>点评：接口是上午写的，人是下午走的！</li>
+</ul>
+<h3 id="2-最佳排序"><a href="#2-最佳排序" class="headerlink" title="2. 最佳排序"></a>2. 最佳排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>, <span class="number">30000000</span>, <span class="number">1</span>, <span class="number">6</span>, <span class="number">40000000</span>, <span class="number">5</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">final</span> <span class="keyword">int</span> number : numbers) &#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Thread.sleep(number);</span><br><span class="line">                    System.out.println(number);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException ignore) &#123;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>指数：⭐⭐⭐</li>
+<li>解毒：用数字休眠时常排序，谁醒来的时间早，谁就先输出。</li>
+<li>点评：思路清奇，要不是这次排序等了一天，老板也不能踢他！</li>
+</ul>
+<h3 id="3-有点烧脑"><a href="#3-有点烧脑" class="headerlink" title="3. 有点烧脑"></a>3. 有点烧脑</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test_idx_hashMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">64</span>);</span><br><span class="line">    map.put(<span class="string">&quot;alderney&quot;</span>, <span class="string">&quot;未实现服务&quot;</span>);</span><br><span class="line">    map.put(<span class="string">&quot;luminance&quot;</span>, <span class="string">&quot;未实现服务&quot;</span>);</span><br><span class="line">    map.put(<span class="string">&quot;chorology&quot;</span>, <span class="string">&quot;未实现服务&quot;</span>);</span><br><span class="line">    map.put(<span class="string">&quot;carline&quot;</span>, <span class="string">&quot;未实现服务&quot;</span>);</span><br><span class="line">    map.put(<span class="string">&quot;fluorosis&quot;</span>, <span class="string">&quot;未实现服务&quot;</span>);</span><br><span class="line">    map.put(<span class="string">&quot;angora&quot;</span>, <span class="string">&quot;未实现服务&quot;</span>);</span><br><span class="line">    map.put(<span class="string">&quot;insititious&quot;</span>, <span class="string">&quot;未实现服务&quot;</span>);</span><br><span class="line">    map.put(<span class="string">&quot;insincere&quot;</span>, <span class="string">&quot;已实现服务&quot;</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">long</span> startTime = System.currentTimeMillis();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100000000</span>; i++) &#123;</span><br><span class="line">        map.get(<span class="string">&quot;insincere&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;耗时(initialCapacity)：&quot;</span> + (System.currentTimeMillis() - startTime));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li><p>指数：⭐⭐⭐⭐⭐</p>
+</li>
+<li><p>解毒：这是一个定义<code>HashMap</code>存放业务实现key，通过key调用服务的功能。但这里的<code>key</code>，只有<code>insincere</code>有用，其他的都是未实现服务。那你看到有啥问题了吗？</p>
+<ul>
+<li>这点代码乍一看没什么问题，看明白了就是代码里下砒霜！<strong>它的目的就一个，要让所有的key成一个链表放到HashMap中，而且把有用的key放到链表的最后，增加get时的耗时！</strong></li>
+<li>首先，<code>new HashMap&lt;&gt;(64);</code>为啥默认初始化64个长度？因为默认长度是8，插入元素时，当链表长度为8时候会进行扩容和链表树化判断，此时就会把原有的key散列了，不能让所有key构成一个时间复杂度较高的链表。</li>
+<li>其次，所有的 <code>key</code> 都是刻意选出来的，因为他们在 <code>HashMap</code> 计算下标时，下标值都为0，idx = <code>(size - 1) &amp; (key.hashCode() ^ (key.hashCode() &gt;&gt;&gt; 16))</code>，这样就能让所有 <code>key</code> 都散列到同一个位置进行碰撞。<em>而且单词 <code>insincere</code> 的意思是；<code>不诚恳的、不真诚的</code>！</em></li>
+<li>最后，前7个key其实都是废 <code>key</code>，不起任何作用，只有最后一个 key 有服务。那么这样就可以在HashMap中建出来很多这样耗时的碰撞链表，当然要满足<code>0.75</code>的负载因子，不要让HashMap扩容。</li>
+<li>整体的效果如下图，key并没有均匀散列；<br><img src="https://bugstack.cn/assets/images/2020/interview/interview-all-00.png"></li>
+</ul>
+</li>
+<li><p>点评：能写出这种代码就是薪资没给够，等着代码优化提加薪呢！</p>
+</li>
+</ul>
+<h3 id="4-迷之求和"><a href="#4-迷之求和" class="headerlink" title="4. 迷之求和"></a>4. 迷之求和</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test_add</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">        num = num++;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(num);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>指数：⭐⭐</li>
+<li>解毒：最终 <code>num</code> 结果为 0，<code>num++</code> 根本没起啥作用。因为后++，是先用结果，在++操作，不会给赋值。正确写法是：num = ++ num；</li>
+<li>点评：这种错误就跟开车闯红灯似的，轻则扣分罚款，重则倾家荡产。</li>
+</ul>
+<h3 id="5-花里胡哨"><a href="#5-花里胡哨" class="headerlink" title="5. 花里胡哨"></a>5. 花里胡哨</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">checkAge</span><span class="params">(<span class="keyword">int</span> age )</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span> result;</span><br><span class="line">    <span class="keyword">if</span> (age &gt;<span class="number">18</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        result=<span class="keyword">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        result=<span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>指数：⭐</li>
+<li>解毒：代码可以运行，但是可以优化为<code>return age &gt; 18</code>。</li>
+<li>点评：你们公司是按照代码行数打绩效？不做格式化、不整洁、不看IDEA工具提示，代码是写给人看的！啥有不是！</li>
+</ul>
+<h3 id="6-数字判断"><a href="#6-数字判断" class="headerlink" title="6. 数字判断"></a>6. 数字判断</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNumber</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Integer.parseInt(str);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>指数：⭐⭐</li>
+<li>解毒：判断是不是数字，不抛异常就是，抛异常就不是。这可以使用 <code>StringUtils</code> 工具包判断，也可以自己写正则判断。</li>
+<li>点评：这代码真烧，用异常做业务。这不是把🍄蘑菇给狗狗吃吗！🐕狗狗没死你到是吃蘑菇呀，你吃狗粑粑。</li>
+</ul>
+<h3 id="7-代码健壮"><a href="#7-代码健壮" class="headerlink" title="7. 代码健壮"></a>7. 代码健壮</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">neverStop</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//一直循环</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//业务处理流程</span></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="comment">//抓到异常，不处理、不打日志、就是不要停，继续跑</span></span><br><span class="line">            <span class="keyword">continue</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>指数：⭐⭐⭐</li>
+<li>解毒：把可能抛异常的代码用tryCatch包起来，一直跑，遇到异常也要跑。这个时候遇到异常，要做一些流程处理，最起码要打日志和报警。</li>
+<li>点评：业务开发很多时候都是为了解决异常流程，就像<code>擦屁屁的纸80%的面积是保护手的。怎么滴，我看你这代码，是非要一直抠破呀！</code></li>
+</ul>
+<h3 id="8-性能优化"><a href="#8-性能优化" class="headerlink" title="8. 性能优化"></a>8. 性能优化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// APP首页查询，优化前</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">queryInitInfo</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">3000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// APP首页查询，优化后</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">queryInitInfo</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">500</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>指数：⭐⭐⭐</li>
+<li>解毒：没啥解毒的，一公斤鹤顶红兑了一口口水！</li>
+<li>点评：点评不了啦，抓到就开了吧！</li>
+</ul>
+<h3 id="9-无用日志"><a href="#9-无用日志" class="headerlink" title="9.  无用日志"></a>9.  无用日志</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 规则引擎校验</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">ruleEngine</span><span class="params">(MatterReq req)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 业务流程</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        logger.error(e);  <span class="comment">// 只打异常，不打入参信息</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>指数：⭐</li>
+<li>解毒：日志里只打了异常，没有入参信息，当你的方法有大量的调用时，很难快速定位问题。</li>
+<li>点评：下次记得把<code>产品经理</code>也打日志里去，要死一起死！</li>
+</ul>
+<h3 id="10-耗时遍历"><a href="#10-耗时遍历" class="headerlink" title="10. 耗时遍历"></a>10. 耗时遍历</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test_LinkedList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 初始化100万数据</span></span><br><span class="line">    List&lt;Integer&gt; list = <span class="keyword">new</span> LinkedList&lt;Integer&gt;(<span class="number">1000000</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 遍历求和</span></span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line">        sum += list.get(i);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>指数：⭐⭐⭐⭐</li>
+<li>解毒：乍一看可能觉得没什么问题，但是这个遍历求和会非常慢。主要因为链表的数据结构，每一次<code>list.get(i)</code>都是从链表的头开始查找，与<code>ArrayList</code>不同，<code>LinkedList</code>它时间复杂度是O(n)。那如果说你不知道对方传过来的是<code>LinkedList</code>还是<code>ArrayList</code>呢，其实可以通过<code>list instanceof RandomAccess</code> 进行判断。<code>ArrayList</code> 有随机访问的实现，<code>LinkedList</code> 是没有。同时也可以使用增强的for循环或者<code>Iterator</code>进行遍历。</li>
+<li>点评： 根基不牢，地动山摇！一知半解，坑了老铁！</li>
+</ul>
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h2><p><em>好的代码千篇一律，差的程序升值加薪！</em>，这些有毒的代码，淋漓尽致的展示了程序员的才华出众，同时也严重怀疑就是钱给少了！</p>
+<p><strong>敲黑板</strong>：想在这编码这条路上走的更远，还是需要脚踏实地的把根基打牢。所以非常推进你阅读以下系列专栏文章，夯实基础、拓展能力、提升眼界；</p>
+<ul>
+<li>Java核心突破瓶颈篇：<a target="_blank" rel="noopener" href="https://bugstack.cn/itstack/interview.html">https://bugstack.cn/itstack/interview.html</a></li>
+<li>重学Java设计模式篇：<a target="_blank" rel="noopener" href="https://bugstack.cn/itstack/itstack-demo-design.html">https://bugstack.cn/itstack/itstack-demo-design.html</a></li>
+<li>Java架构设计学习篇：<a target="_blank" rel="noopener" href="https://bugstack.cn/itstack-demo-ddd/itstack-demo-ddd.html">https://bugstack.cn/itstack-demo-ddd/itstack-demo-ddd.html</a></li>
+</ul>
+<p><strong>好！</strong>，本篇文章就到这里，有意思的代码还有很多，欢迎在评论区留下你的鬼畜代码！</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/01/17/%E6%95%B0%E5%AD%A6%EF%BC%8C%E7%A6%BB%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E6%9C%89%E5%A4%9A%E8%BF%91%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          数学，离一个程序员有多近？
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="握草，你竟然在代码里下毒！" data-title="握草，你竟然在代码里下毒！" data-url="http://example.com/2020/09/06/%E6%8F%A1%E8%8D%89%EF%BC%8C%E4%BD%A0%E7%AB%9F%E7%84%B6%E5%9C%A8%E4%BB%A3%E7%A0%81%E9%87%8C%E4%B8%8B%E6%AF%92%EF%BC%81/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2021 小傅哥
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
